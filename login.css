@@ -1,0 +1,109 @@
+/* Set background image */
+body {
+    background-image: url("sarova.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  /* Dark theme */
+  body {
+    color: #fff;
+    background-color: #333;
+  }
+  
+  /* Form styles */
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"],
+  form select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form input[type="password"]:focus,
+  form select:focus {
+    background-color: #f0f0f0;
+  }
+  
+  form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00bcd4;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #008ba3;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  button{
+    margin: auto;
+    border: none;
+    background-color: turquoise;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  #register-btn{
+    margin-left: 85%;
+  }
+  h1{
+    text-align: center;
+  }
+
+  a.register-link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a.register-link:hover {
+    color: #f00;
+}
+
+a.login-link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a.login-link:hover {
+    color: #0f0;
+}
+

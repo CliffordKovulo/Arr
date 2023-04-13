@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login and Registration Form</title>
+    <link rel="stylesheet" href="login.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Show the login form by default
+			$("#login-form").show();
+			$("#register-form").hide();
+
+			// Handle clicks on the login and register buttons
+			$("#login-btn").click(function() {
+				$("#login-form").show();
+				$("#register-form").hide();
+			});
+
+			$("#register-btn").click(function() {
+				$("#login-form").hide();
+				$("#register-form").show();
+			});
+		});
+
+        
+	</script>
+    <script>
+        var loginLink = document.querySelector('.login-link');
+        var loginForm = document.querySelector('#login-form');
+        loginLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          loginForm.style.display = (loginForm.style.display == 'none') ? 'block' : 'none';
+        });
+      </script>
+      
+</head>
+<body>
+	<h1>Login and Registration Form</h1>
+
+	<button id="login-btn">Login</button>
+	<button id="register-btn">Register</button>
+
+	<?php if (!empty($error_message)): ?>
+   <p class="error-message"><?php echo $error_message; ?></p>
+	<?php endif; ?>
+	<form id="login-form" method="POST" action="login.php">
+		<h2>Login</h2>
+
+		<label for="email">Email:</label>
+		<input type="email" name="email" required><br>
+
+		<label for="password">Password:</label>
+		<input type="password" name="password" required><br>
+
+		<input type="submit" value="Login">
+
+        <p>Don't have an account? <a href="#" onclick="document.getElementById('register-form')" class="register-link">Sign up</a></p>
+
+	</form>
+	<?php if (!empty($error_message)): ?>
+   <p class="error-message"><?php echo $error_message; ?></p>
+	<?php endif; ?>
+
+	<form id="register-form" method="POST" action="register.php">
+		
+		<h2>Register</h2>
+
+		<label for="username">Username:</label>
+		<input type="text" name="username" required><br>
+
+		<label for="email">Email:</label>
+		<input type="email" name="email" required><br>
+
+		<label for="gender">Gender:</label>
+		<select name="gender" required>
+			<option value="">--Select--</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select><br>
+
+		<label for="id_number">ID Number:</label>
+		<input type="text" name="id_number" required><br>
+
+		<label for="password">Password:</label>
+		<input type="password" name="password" required><br>
+
+        <label for="confirm_password">Confirm password</label>
+		<input type="password" id="confirm_password" name="confirm_password"><br>
+
+		<input type="submit" value="Register" href = "randompage.html">
+
+        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+		
+
+
+	</form>
+</body>
+</html>
